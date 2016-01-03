@@ -7,10 +7,11 @@ class Link
 
   # adds datamapper functionality to this class
   include DataMapper::Resource
-  has n, :tags, through: Resource
+
   # these property declarations set the column headers in the Link table
   property :id,     Serial # Serial means that it will be auto-incremented for every record
   property :title,  String
   property :url,    String
+  has n, :tags, through: Resource
 
 end
